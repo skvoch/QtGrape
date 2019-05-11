@@ -1,4 +1,4 @@
-QT += gui
+QT += gui widgets
 
 CONFIG += c++14 console
 CONFIG -= app_bundle
@@ -19,7 +19,8 @@ SOURCES += \
     QtGrape.cpp \
     Painter.cpp \
     ColorSelector.cpp \
-    IndexSelector.cpp
+    IndexSelector.cpp \
+    CenterPainter.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -30,4 +31,6 @@ HEADERS += \
     QtGrape.h \
     Painter.h \
     ColorSelector.h \
-    IndexSelector.h
+    IndexSelector.h \
+    CenterPainter.h \
+    Utils.h

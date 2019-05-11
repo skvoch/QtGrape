@@ -7,16 +7,9 @@ QtGrape::QtGrape()
 
 QImage QtGrape::generate(const QString &name)
 {
+    const auto sequence = m_getBits(name);
 
-    auto result = m_getBits(name);
-    m_painter.input(result);
-
-    for(auto r:result) {
-        std::cout << r;
-    }
-    std::cout << std::endl;
-
-    return QImage();
+    return m_painter.input(sequence);
 }
 
 std::vector<int> QtGrape::m_getBits(const QString &str)

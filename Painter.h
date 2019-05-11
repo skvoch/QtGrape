@@ -7,7 +7,9 @@
 #include <QImage>
 #include <QPainter>
 
+#include "Utils.h"
 #include "ColorSelector.h"
+#include "CenterPainter.h"
 
 class Painter
 {
@@ -29,8 +31,11 @@ public:
 private:
     int m_size;
 
+
+    QColor m_background;
     std::shared_ptr<IndexSelector> m_index;
     std::shared_ptr<ColorSelector> m_pallete;
+    std::shared_ptr<CenterPainter> m_center;
 };
 
 #endif // PAINTER_H
