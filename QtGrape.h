@@ -1,6 +1,8 @@
 #ifndef QTGRAPE_H
 #define QTGRAPE_H
 
+#include "Painter.h"
+
 #include <iostream>
 #include <bitset>
 
@@ -15,7 +17,11 @@ class QtGrape
 public:
     QtGrape();
 
+    /// \brief Generate avater string
+    /// \param [in] const ref QString
+    /// \return QImage
     QImage generate(const QString &str);
+
 private:
     /// \brief Getting binary sequence by string
     /// \param [in] const ref QString
@@ -27,6 +33,8 @@ private:
     /// \param [in] Hash algorithm
     /// \return std::string
     std::string m_getHash(const QString &str, QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5);
+
+    Painter m_painter;
 };
 
 #endif // QTGRAPE_H

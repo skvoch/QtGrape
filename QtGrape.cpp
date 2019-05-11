@@ -9,6 +9,8 @@ QImage QtGrape::generate(const QString &name)
 {
 
     auto result = m_getBits(name);
+    m_painter.input(result);
+
     for(auto r:result) {
         std::cout << r;
     }

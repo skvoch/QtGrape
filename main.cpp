@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     QtGrape instance;
 
     instance.generate(QString("skvoch"));
-    instance.generate(QString("skvoch2"));
+    instance.generate(QString("azbuka332"));
 
 
 
