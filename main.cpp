@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 
     QtGrape instance;
 
-    instance.generate(QString("zwex"));
+    instance.generate(QString("overwatch"));
 
 
 

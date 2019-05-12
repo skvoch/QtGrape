@@ -9,6 +9,7 @@
 
 #include "Utils.h"
 #include "ColorSelector.h"
+#include "BoundPainter.h"
 #include "CenterPainter.h"
 
 class Painter
@@ -36,6 +37,7 @@ private:
     std::shared_ptr<IndexSelector> m_index;
     std::shared_ptr<ColorSelector> m_pallete;
     std::shared_ptr<CenterPainter> m_center;
+    std::shared_ptr<BoundPainter>  m_bound;
 };
 
 #endif // PAINTER_H

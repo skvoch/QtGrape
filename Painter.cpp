@@ -6,6 +6,7 @@ Painter::Painter()
 
     m_pallete = std::make_shared<ColorSelector>(m_index);
     m_center  = std::make_shared<CenterPainter>(m_index);
+    m_bound   = std::make_shared<BoundPainter>(m_index);
     m_background.setRgb(255,255,255);
     m_size = 255;
 }
@@ -24,7 +25,7 @@ QImage Painter::input(std::vector<int> data)
     painter.fillRect(result.rect(),m_background);
 
     m_center->draw(painter,center_rect,color,current,current+=m_center->getStylesCount());
-
+    m_bound->draw(painter,result.rect(),color,bound,current,current+=m_center->getStylesCount());
     result.save("/home/home/image.png","png",100);
 
 

@@ -20,7 +20,8 @@ SOURCES += \
     Painter.cpp \
     ColorSelector.cpp \
     IndexSelector.cpp \
-    CenterPainter.cpp
+    CenterPainter.cpp \
+    BoundPainter.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -33,4 +34,5 @@ HEADERS += \
     ColorSelector.h \
     IndexSelector.h \
     CenterPainter.h \
-    Utils.h
+    Utils.h \
+    BoundPainter.h
